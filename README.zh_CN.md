@@ -2,15 +2,16 @@
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=lijy91%40live.com&currency_code=USD&source=url)
 
-English | [简体中文](./README.zh_CN.md)
+[English](./README.md) | 简体中文
 
-## Introduction
+## 简介
 
 Examples for flutter flipperkit.
 
-## Examples
+## 示例
 
-These are the available examples in this repository.
+这些是此代码库中的可用示例。
+
 
 | Example                                                         | Library              | Pub                                                                                                                    |
 | --------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -18,13 +19,13 @@ These are the available examples in this repository.
 | [fish_redux_example](./fish_redux_example/)                     | fish-redux           | [![pub package](https://img.shields.io/pub/v/fish_redux.svg)](https://pub.dev/packages/fish_redux)                     |
 | [flutter_inappbrowser_example](./flutter_inappbrowser_example/) | flutter_inappbrowser | [![pub package](https://img.shields.io/pub/v/flutter_inappbrowser.svg)](https://pub.dev/packages/flutter_inappbrowser) |
 
-## Discussion
+## 探讨
 
-If you have any suggestions or questions about this project, you can discuss it by [Telegram Group](https://t.me/flutterdebugger) or my wechat.
+如果您对此项目有任何建议或疑问，可以通过 [Telegram Group](https://t.me/flutterdebugger) 或我的微信进行讨论。
 
 ![](http://blankapp.org/assets/images/wechat_qrcode.png)
 
-## License
+## 许可证
 
 ```
 MIT License
