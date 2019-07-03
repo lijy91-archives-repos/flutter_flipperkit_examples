@@ -17,6 +17,7 @@ These are the available examples in this repository.
 | [dio_example](./dio_example/)                                   | dio                  | [![Pub](https://img.shields.io/pub/v/dio.svg?style=flat-square)](https://pub.dev/packages/dio)                         |
 | [fish_redux_example](./fish_redux_example/)                     | fish-redux           | [![pub package](https://img.shields.io/pub/v/fish_redux.svg)](https://pub.dev/packages/fish_redux)                     |
 | [flutter_inappbrowser_example](./flutter_inappbrowser_example/) | flutter_inappbrowser | [![pub package](https://img.shields.io/pub/v/flutter_inappbrowser.svg)](https://pub.dev/packages/flutter_inappbrowser) |
+| [http_example](./http_example/)                                 | http                 | [![Pub](https://img.shields.io/pub/v/http.svg?style=flat-square)](https://pub.dev/packages/http)                       |
 
 ## Discussion
 
