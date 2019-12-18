@@ -1,5 +1,4 @@
 import 'package:fish_redux/fish_redux.dart';
-import 'package:flipperkit_fish_redux_middleware/flipperkit_fish_redux_middleware.dart';
 
 import 'effect.dart';
 import 'list_adapter/adapter.dart';
@@ -17,17 +16,14 @@ class ToDoListPage extends Page<PageState, Map<String, dynamic>> {
           reducer: buildReducer(),
           view: buildView,
           dependencies: Dependencies<PageState>(
-              adapter: ToDoListAdapter(),
+              adapter: NoneConn<PageState>() + ToDoListAdapter(),
               slots: <String, Dependent<PageState>>{
                 'report': ReportConnector() + ReportComponent()
               }),
-          middleware: <Middleware<PageState>>[
-            logMiddleware(tag: 'ToDoListPage'),
-            flipperKitFishReduxMiddleware(
-              filter: (actionType) {
-                return actionType.startsWith('\$');
-              }
-            ),
-          ],
+
+          /// 页面私有AOP, 如果需要
+          // middleware: <Middleware<PageState>>[
+          //   logMiddleware(tag: 'ToDoListPage'),
+          // ],
         );
 }

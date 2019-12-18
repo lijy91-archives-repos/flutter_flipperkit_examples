@@ -13,11 +13,11 @@ environment:
     sdk: '>=2.0.0-dev.68.0 <3.0.0'
 
 dependencies:
-    fish_redux: ^0.2.2
+    fish_redux: ^0.3.1
     flutter:
         sdk: flutter
-    flutter_flipperkit: ^0.0.15
-    flipperkit_fish_redux_middleware: ^0.0.3
+    flutter_flipperkit: ^0.0.21
+    flipperkit_fish_redux_middleware: ^0.0.4
     path_provider: ^0.4.1
 
 dev_dependencies:
@@ -27,11 +27,12 @@ dev_dependencies:
         sdk: flutter
     flutter_test:
         sdk: flutter
+
 # dependency_overrides:
 #   flutter_flipperkit:
-#     path: ../../blankapp/flutter_flipperkit
+#     path: ../../flutter_flipperkit
 #   flipperkit_fish_redux_middleware:
-#     path: ../../blankapp/flutter_flipperkit_plugins/packages/flipperkit_fish_redux_middleware
+#     path: ../../flutter_flipperkit_plugins/packages/flipperkit_fish_redux_middleware
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
