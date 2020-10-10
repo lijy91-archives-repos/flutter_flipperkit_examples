@@ -1,5 +1,5 @@
 import 'package:fish_redux/fish_redux.dart';
-import 'package:flutter/material.dart' hide Action;
+import 'package:flutter/material.dart' hide Action, Page;
 import 'package:flipperkit_fish_redux_middleware/flipperkit_fish_redux_middleware.dart';
 
 import 'global_store/state.dart';

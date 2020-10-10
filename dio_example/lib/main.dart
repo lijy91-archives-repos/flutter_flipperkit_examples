@@ -1,7 +1,6 @@
 import 'dart:convert';
-import 'dart:io';
 
-import 'package:cookie_jar/cookie_jar.dart';
+//import 'package:cookie_jar/cookie_jar.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
@@ -19,14 +18,16 @@ parseJson(String text) {
 }
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   FlipperClient flipperClient = FlipperClient.getDefault();
 
   flipperClient.addPlugin(new FlipperNetworkPlugin());
   flipperClient.start();
 
   // add interceptors
-  dio.interceptors..add(CookieManager(CookieJar()))..add(LogInterceptor());
-  (dio.transformer as DefaultTransformer).jsonDecodeCallback = parseJson;
+  //dio.interceptors.add(CookieManager(CookieJar()));
+  dio.interceptors.add(LogInterceptor());
+  //(dio.transformer as DefaultTransformer).jsonDecodeCallback = parseJson;
   dio.options.receiveTimeout = 15000;
 //  (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
 //      (client) {
@@ -76,29 +77,19 @@ class _MyHomePageState extends State<MyHomePage> {
           RaisedButton(
             child: Text("Request"),
             onPressed: () {
-//              dio.get("https://baidu.com").then((r) {
-//                setState(() {
-//                  _text = r.data.replaceAll(RegExp(r"\s"), "");
-//                });
-//              });
-
-              dio.post("http://10.1.10.250:3000",data:{"a":1}).then((r) {
+              dio
+                  .get<String>(
+                      "https://www.thelotent.com/WSVistaWebClient/OData.svc/GetNowShowingSessions?\$format=json&\$filter=CinemaId+eq+%27100%27")
+                  .then((r) {
                 setState(() {
+                  print(r.data);
                   _text = r.data.replaceAll(RegExp(r"\s"), "");
                 });
               }).catchError(print);
             },
           ),
           RaisedButton(
-            child: Text("RequestJson"),
-            onPressed: () {
-              dio.get("https://www.v2ex.com/api/topics/hot.json",).then((r) {
-                print(r);
-              }).catchError(print);
-            },
-          ),
-          RaisedButton(
-            child: Text("Open new page"),
+            child: Text("Open new page5"),
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return RequestRoute();

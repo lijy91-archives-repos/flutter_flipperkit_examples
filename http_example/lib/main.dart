@@ -3,6 +3,7 @@ import 'package:flutter_flipperkit/flutter_flipperkit.dart';
 import 'package:flipperkit_http_interceptor/flipperkit_http_interceptor.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   FlipperClient flipperClient = FlipperClient.getDefault();
 
   flipperClient.addPlugin(new FlipperNetworkPlugin(
@@ -31,6 +32,10 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        // This makes the visual density adapt to the platform that you run
+        // the app on. For desktop platforms, the controls will be smaller and
+        // closer together (more dense) than on mobile platforms.
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -76,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
-          // Column is also layout widget. It takes a list of children and
+          // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
           //
